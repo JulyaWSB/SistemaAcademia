@@ -11,4 +11,5 @@ public class Aluno extends Pessoa{
 		this.dataMatricula = dataMatricula;
 		this.plano = plano;
 	}
+
 }

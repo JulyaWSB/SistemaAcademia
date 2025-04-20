@@ -1,6 +1,6 @@
 package org.serratec.trabalho.modelos;
 
-public class Pessoa {
+public abstract class Pessoa {
 	protected String nome;
     protected String cpf;
     protected String senha;
@@ -10,8 +10,20 @@ public class Pessoa {
         this.cpf = cpf;
         this.senha = senha;
     }
+     
 
-    public String getCpf() {
+    public String getNome() {
+		return nome;
+	}
+
+
+	public String getCpf() {
         return cpf;
     }
+
+	public String getSenha() {
+		return senha;
+	}
+    
+    
 }
