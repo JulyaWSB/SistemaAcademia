@@ -1,4 +1,4 @@
-package org.serratec.trabalho.services;
+package org.serratec.trabalho.metodos;
 
 public class paraTestes {
 

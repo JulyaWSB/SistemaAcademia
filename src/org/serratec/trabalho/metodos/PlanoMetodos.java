@@ -1,11 +1,11 @@
-package org.serratec.trabalho.services;
+package org.serratec.trabalho.metodos;
 
 import org.serratec.trabalho.enums.PlanoEnum;
 import org.serratec.trabalho.modelos.Plano;
 
-public class PlanoService {
+public class PlanoMetodos {
 
-	private static boolean planoExistente (PlanoEnum plano, String descricao, double valor) {
+	public static boolean planoExistente (PlanoEnum plano, String descricao, double valor) {
 		for (Plano pl : BancoDeDados.listaPlanos()) {
 			if ((pl.getPlano().equals(plano) & pl.getDescricao().equals(descricao) & pl.getValor()==(valor)))
 				return true;}
@@ -22,14 +22,5 @@ public class PlanoService {
 			System.out.println((i + 1) + ". " + pl.toString());
 		}}
 
-	public static void cadastrarPlanos (PlanoEnum plano, String descricao, double valor) {
-		if (planoExistente(plano, descricao, valor)) {
-			System.out.println("Falha no cadastro: Plano já cadastrado."); //trocar por exceção
-			return;
-		}
-		Plano novoPlano = new Plano(plano, descricao, valor);
-		BancoDeDados.adicionarPlano(novoPlano);
-		System.out.println("Plano cadastrado com sucesso!");
-
-	}
+	
 }

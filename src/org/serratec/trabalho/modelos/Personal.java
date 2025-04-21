@@ -11,5 +11,5 @@ public class Personal extends Pessoa{
 		this.cref = cref;
 		this.especialidade = especialidade;
 	}
-    
+
 }

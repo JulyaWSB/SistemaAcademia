@@ -1,11 +1,11 @@
-package org.serratec.trabalho.services;
+package org.serratec.trabalho.metodos;
 
 import org.serratec.trabalho.modelos.Aluno;
 import org.serratec.trabalho.modelos.Funcionario;
 import org.serratec.trabalho.modelos.Personal;
 import org.serratec.trabalho.modelos.Pessoa;
 
-public class UsuarioService {
+public class UsuarioMetodos {
 
 	public static boolean cpfExistente(String cpf) {
 		for (Pessoa p : BancoDeDados.listaTodasAsPessoas()) {
@@ -35,9 +35,5 @@ public class UsuarioService {
 		return "Desconhecido"; //trocar por exceção?
 	};
 
-
-	
-
-	
 
 }

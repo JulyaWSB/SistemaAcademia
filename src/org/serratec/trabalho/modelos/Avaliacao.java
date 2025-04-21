@@ -2,7 +2,7 @@ package org.serratec.trabalho.modelos;
 
 import java.time.LocalDate;
 
-class Avaliacao {
+public class Avaliacao {
     private Aluno aluno;
     private LocalDate data;
     private Personal personal;

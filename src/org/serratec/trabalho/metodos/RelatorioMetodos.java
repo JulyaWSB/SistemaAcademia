@@ -1,6 +1,6 @@
-package org.serratec.trabalho.services;
+package org.serratec.trabalho.metodos;
 
-public class RelatorioService {
+public class RelatorioMetodos {
 	
     public void gerarRelatorioPlanos() {
        

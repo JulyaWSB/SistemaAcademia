@@ -1,4 +1,4 @@
-package org.serratec.trabalho.services;
+package org.serratec.trabalho.metodos;
 
 import java.time.LocalDate;
 
@@ -6,14 +6,23 @@ import org.serratec.trabalho.enums.Especialidades;
 import org.serratec.trabalho.enums.PlanoEnum;
 import org.serratec.trabalho.modelos.Aluno;
 import org.serratec.trabalho.modelos.Personal;
+import org.serratec.trabalho.modelos.Plano;
 
-public class FuncionarioService {
-	public void cadastrarPlano() {
-
+public class FuncionarioMetodos {
+	
+	
+	public static void cadastrarPlanos (PlanoEnum plano, String descricao, double valor) {
+		if (PlanoMetodos.planoExistente(plano, descricao, valor)) {
+			System.out.println("Falha no cadastro: Plano já cadastrado."); //trocar por exceção
+			return;
+		}
+		Plano novoPlano = new Plano(plano, descricao, valor);
+		BancoDeDados.adicionarPlano(novoPlano);
+		System.out.println("Plano cadastrado com sucesso!");
 	}
 
-	public void cadastrarAluno(String nome, String cpf, String senha, LocalDate dataMatricula, PlanoEnum plano) {
-		if (UsuarioService.cpfExistente(cpf)) {
+	public void cadastrarAluno(String nome, String cpf, String senha, LocalDate dataMatricula, Plano plano) {
+		if (UsuarioMetodos.cpfExistente(cpf)) {
 			System.out.println("Falha no cadastro: CPF já cadastrado."); // trocar por exceções? 
 			return;
 		}
@@ -24,7 +33,7 @@ public class FuncionarioService {
 	}
 
 	public void cadastrarPersonal(String nome, String cpf, String senha, String cref, Especialidades especialidade){
-		if (UsuarioService.cpfExistente(cpf)) {
+		if (UsuarioMetodos.cpfExistente(cpf)) {
 			System.out.println("Falha no cadastro: CPF já cadastrado.");// trocar por exceções? 
 			return;
 		} 
@@ -32,6 +41,6 @@ public class FuncionarioService {
 		BancoDeDados.adicionarPersonal(novoPersonal);
 		System.out.println("Personal cadastrado com sucesso!"); 
 	}
-
-
+	
+	public void emitirRelatorios() {}
 }
