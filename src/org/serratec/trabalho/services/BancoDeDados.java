@@ -14,36 +14,45 @@ public class BancoDeDados {
 	static List<Aluno> alunos = new ArrayList<>();
 	static List<Personal> personals = new ArrayList<>();
 	static List<Funcionario> funcionarios = new ArrayList<>();
-	//List<Plano> planos = new ArrayList<>();
-	//List<Avaliacao> avaliacoes = new ArrayLis<>();
-	
+	static List<Plano> planos = new ArrayList<>();
+	//List<Avaliacao> avaliacoes = new ArrayList<>();
+
 	public static void adicionarAluno(Aluno aluno){
 		alunos.add(aluno);
 	}
-	
+
 	public static void adicionarPersonal(Personal personal) {
 		personals.add(personal);
 	}
-	
-	public static void adicionarFuncionario(Funcionario funcionario){ //vai ter opção adicionar funcionarios?
+
+	public static void adicionarFuncionario(Funcionario funcionario){ 
 		funcionarios.add(funcionario);
 	}
-	
-	public List<Aluno> listarAlunos() {
+
+	public static void adicionarPlano(Plano plano) {
+		planos.add(plano);
+	}
+
+
+	public static List<Aluno> listaAlunos() {
 		return alunos;
 	} 
 
-	public List<Personal> listarPersonals() {
+	public static List<Personal> listaPersonals() {
 		return personals;
 	} 
 
-	public List<Funcionario> listarFuncionarios() {
+	public static List<Funcionario> listaFuncionarios() {
 		return funcionarios;
 	} 
-	
-	
 
-	public static List<Pessoa> listarTodasAsPessoas() {
+	public static List<Plano> listaPlanos(){
+		return planos;
+	}
+
+
+
+	public static List<Pessoa> listaTodasAsPessoas() {
 		List<Pessoa> todos = new ArrayList<>();
 		todos.addAll(alunos);
 		todos.addAll(personals);
@@ -53,7 +62,7 @@ public class BancoDeDados {
 
 
 	public static Pessoa buscarPessoaPorCpf(String cpf){
-		for (Pessoa p : listarTodasAsPessoas()) {
+		for (Pessoa p : listaTodasAsPessoas()) {
 			if (p.getCpf().equals(cpf)) {
 				return p;
 			}

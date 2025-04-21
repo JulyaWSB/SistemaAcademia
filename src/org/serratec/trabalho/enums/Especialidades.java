@@ -1,4 +1,4 @@
-package org.serratec.trabalho.modelos;
+package org.serratec.trabalho.enums;
 
 public enum Especialidades {
     MUSCULACAO("Musculação"),

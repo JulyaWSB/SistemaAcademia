@@ -1,5 +1,7 @@
 package org.serratec.trabalho.modelos;
 
+import org.serratec.trabalho.enums.Especialidades;
+
 public class Personal extends Pessoa{
 	private String cref;
     private Especialidades especialidade;
