@@ -1,14 +1,14 @@
 package org.serratec.trabalho.modelos;
 
 public class Funcionario extends Pessoa{
-	private String cargo;
+	private CargoFuncionario cargo;
 
-    public Funcionario(String nome, String cpf, String senha, String cargo) {
+    public Funcionario(String nome, String cpf, String senha, CargoFuncionario cargo) {
         super(nome, cpf, senha);
         this.cargo = cargo;
     }
 
-    public String getCargo() {
+    public CargoFuncionario getCargo() {
         return cargo;
     }
 }
