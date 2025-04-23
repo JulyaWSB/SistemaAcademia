@@ -6,7 +6,7 @@ public enum Plano {
     MENSAL_TOTAL("Mensal - musculação + funcional + coletivas", 190.0),
     TRIMESTRAL_TOTAL("Trimestral - todas as modalidades", 500.0),
     SEMESTRAL_TOTAL("Semestral - todas as modalidades", 950.0),
-    ANUAL_TOTAL("Anual - todas as modalidades", 1800.0);
+    ANUAL_TOTAL("Anual - todas as modalidades", 1850.0);
 
     private final String descricao;
     private final double valor;
