@@ -4,7 +4,7 @@ public interface GerarRelatorio {
 	void gerar();
 <<<<<<< Updated upstream
 }
-=======
+========
 }
 >>>>>>> Stashed changes
 }
